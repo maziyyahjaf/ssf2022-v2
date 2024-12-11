@@ -122,7 +122,7 @@ public class NewsService {
     public ArticleDTO toArticleDTO(Article article) {
 
         String id = article.getId();
-        Long publishedOnLong = article.getPublished_on() * 1000L;
+        Long publishedOnLong = article.getPublished_on() * 1000L; // converts to milliseconds
         Date publishedDate = new Date(publishedOnLong);
         String title = article.getTitle();
         String url = article.getUrl();
