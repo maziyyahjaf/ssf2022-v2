@@ -13,6 +13,7 @@ COPY .mvn .mvn
 COPY src src
 
 # Build the project with Maven, skipping the tests
+RUN chmod +x mvnw
 RUN ./mvnw clean package -Dmaven.test.skip=true
 
 # Expose the server port as an environment variable
